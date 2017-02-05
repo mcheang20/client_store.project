@@ -12,8 +12,16 @@
       <li><%= link_to image_tag("logo.png"), root_path %></li>
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Products", products_path %></li>
+      <% if user_signed_in? %>
+        <li class="pull-right"> <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary'%> </li>
+      <% else %>
+        <li class="pull-right"> <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> </li>
+        <li class="pull-right"> <%= link_to "Log In", new_user_session_path, class: 'btn btn-default' %> </li>
+      <% end %>
     </ul>
   </nav>
+
+  <div id="modal" class="modal fade"></div>
 
 <%= yield %>
 
