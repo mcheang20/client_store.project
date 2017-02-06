@@ -1,11 +1,19 @@
 <h1>Products</h1>
-<section>
-  <div>
+<% if current_user_authorized? %>
+  <%= link_to "Add Product", new_product_path, class: 'btn btn-primary'%>
+<% end %>
+  <div class="row">
     <% @products.each do |product| %>
-      <%= image_tag(product.image.url(:medium)) %>
-      <p><%= product.name %></p>
-      <p><%= product.price %></p>
-      <p><%= product.description %></p>
+     <div class="item-info col-md-3">
+      <div class="img-tog"><%= link_to image_tag(product.image.url(:medium)), product%></div>
+        <p class="item-cap"><%= link_to product.name, product %></p></br>
+        <p class="item-cap"><%= product.price %></p></br>
+    </div>
     <% end %>
   </div>
 </section>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <filter id="blur1">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+</svg>

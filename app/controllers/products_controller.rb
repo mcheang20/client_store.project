@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   before_action :require_sign_in, except: [:index, :show]
 
   def index
+    @user = current_user
     @products = Product.all
   end
 
@@ -33,7 +34,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    if @prduct.update_attributes(product_params)
+    if @product.update_attributes(product_params)
       flash[:notice] = "Product was updated successfully."
       redirect_to @product
     else
