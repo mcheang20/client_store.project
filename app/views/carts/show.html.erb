@@ -4,6 +4,29 @@
     a<%= order.product.name %>
     b<%= order.quantity %>
     c<%= number_to_currency(order.product.price) %>
-    d<%= @cart.total_price %>
   <% end %>
+
+    <%= @cart.total_price %>
+
+  <%= form_tag checkout_cart_path(@cart) do %>
+    <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
+    data-key="pk_test_5YfcwOLRWfzdZ4HHQSRhmmYr"
+    data-amount=<%= @cart.total_price %>
+    data-name="Shoppelyft"
+    data-description="Item Order"
+    data-locale="auto"
+    </script>
+  <% end %>
+
+  <form action="/your-server-side-code" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_5YfcwOLRWfzdZ4HHQSRhmmYr"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form>
 </div>
