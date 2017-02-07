@@ -55,6 +55,19 @@ class ProductsController < ApplicationController
     end
   end
 
+  def add_to_cart
+    if session[:cart_id].blank?
+      cart = Cart.create(status: "pending")
+      session[:cart_id] = cart.id
+    else
+      cart = Cart.find(session[:cart_id])
+    end
+
+    product = Product.find(params[:id])
+    cart.orders.create(product_id: product.id, quantity: 1)
+    redirect_to cart
+  end
+
   private
 
   def product_params

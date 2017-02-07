@@ -6,3 +6,4 @@
 <h1><%= @product.name %></h1>
 <h1><%= @product.price %></h1>
 <h1><%= @product.description %></h1>
+<%= link_to "Add to Cart", add_to_cart_product_path(@product) %>

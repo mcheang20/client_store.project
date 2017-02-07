@@ -12,6 +12,11 @@
       <li><%= link_to image_tag("logo.png"), root_path %></li>
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Products", products_path %></li>
+      <% if @cart.present? %>
+        <%= link_to "Cart", carts_path, class: 'btn btn-primary' %>
+      <% else %>
+        <%= link_to "Cart", carts_path, class: 'btn btn-primary' %>
+      <% end %>
       <% if user_signed_in? %>
         <li class="pull-right"> <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary'%> </li>
       <% else %>

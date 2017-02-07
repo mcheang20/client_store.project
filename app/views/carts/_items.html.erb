@@ -1,0 +1,9 @@
+<h1>Cart</h1>
+<div>
+  <%= @cart.orders.each do |order| %>
+    a<%= order.product.name %>
+    b<%= order.quantity %>
+    c<%= number_to_currency(order.product.price) %>
+    d<%= @cart.total_price %>
+  <% end %>
+</div>
