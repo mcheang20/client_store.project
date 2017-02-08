@@ -1,19 +1,20 @@
 <h1>Cart</h1>
 <div>
-  <%= @cart.orders.each do |order| %>
-    a<%= order.product.name %>
-    b<%= order.quantity %>
-    c<%= number_to_currency(order.product.price) %>
+  <% @cart.orders.each do |order| %>
+    <%= order.product.name %>
+    <%= order.quantity %>
+    <%= number_to_currency(order.product.price) %>
   <% end %>
 
-  d<%= @cart.total_price %>
+  <%= number_to_currency(@cart.total_price) %>
   <%= form_tag checkout_cart_path(@cart) do %>
     <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
     data-key="pk_test_5YfcwOLRWfzdZ4HHQSRhmmYr"
-    data-amount=<%= @cart.total_price %>
+    data-amount=<%= @cart.total_price * 100 %>
     data-name="Shoppelyft"
     data-description="Item Order"
     data-locale="auto"
+    data-panel-label="Checkout"
     </script>
   <% end %>
 
@@ -25,7 +26,7 @@
     data-name="Demo Site"
     data-description="Widget"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="auto">
+    data-locale="auto"
   </script>
 </form>
 </div>

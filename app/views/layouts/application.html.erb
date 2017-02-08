@@ -14,6 +14,8 @@
       <li><%= link_to "Products", products_path %></li>
       <% if @cart.present? %>
         <%= link_to "Cart", cart_path(@cart), class: 'btn btn-primary' %>
+      <% else %>
+        <%= link_to "Cart", carts_path, class: 'btn btn-primary' %>
       <% end %>
       <% if user_signed_in? %>
         <li class="pull-right"> <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary'%> </li>
@@ -23,8 +25,22 @@
       <% end %>
     </ul>
   </nav>
-
-  <div id="modal" class="modal fade"></div>
+  <% if flash[:notice] %>
+      <div class="alert-wrapper">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:notice] %>
+      </div>
+    <% elsif flash[:error] %>
+      <div class="alert-wrapper">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:error] %>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class="alert-wrapper">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
 
 <%= yield %>
 

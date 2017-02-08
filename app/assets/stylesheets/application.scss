@@ -37,6 +37,20 @@
     }
  }
 
+.alert-wrapper {
+  position: absolute;
+  z-index: 1000;
+  padding: 15px;
+  background: tomato;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .5px;
+  margin-top: -20px;
+}
+
  #myCarousel {
    position: absolute;
    top: 0;

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :carts do
     member do
-      get :checkout
+      post :checkout
     end
   end
   resources :products do
