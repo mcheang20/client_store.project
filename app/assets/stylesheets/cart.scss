@@ -1,0 +1,27 @@
+.cart-title {
+  font-size: 45px;
+  border-bottom: 1px solid rgba(1,1,1,.1);
+  color: #444444;
+  font-weight: 300;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.table-cart {
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom: 1px solid rgba(1,1,1,.1);
+
+    td {
+      font-size: 16px;
+    }
+}
+
+.cart-checkout {
+  margin-right: 160px;
+  margin-top: 20px;
+
+    p {
+      font-size: 20px;
+    }
+}

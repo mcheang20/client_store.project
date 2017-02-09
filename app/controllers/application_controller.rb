@@ -3,11 +3,11 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  #before_filter :load_cart
+  before_filter :load_cart
 
-  #def load_cart
-  #  @cart = Cart.find(session[:cart_id]) if session[:cart_id].present?
-  #end
+  def load_cart
+    @cart = Cart.find(session[:cart_id]) if session[:cart_id].present?
+  end
 
   def require_sign_in
     unless current_user

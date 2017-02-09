@@ -80,14 +80,18 @@
   h1 {
     color: #333d47;
   }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    color: grey;
+  }
 }
 
 .product-thumbnails {
   margin-top: 40px;
   margin-right: -65px;
-
-  img {
-  }
+  min-height: 400px;
 }
 
 .checkout-btn {

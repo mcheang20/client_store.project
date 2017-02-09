@@ -21,6 +21,16 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+   margin: 0 0 75px;
+}
+
  .navbar-top {
    background-color: #fafafa;
    top: 0;
@@ -77,9 +87,34 @@
     }
  }
 
+ #social-btn {
+     i{
+      font-size: 26px;
+     }
+ }
+
  .title {
     font-size: 45px;
     border-bottom: 1px solid rgba(1,1,1,.1);
     color: #444444;
     font-weight: 300;
  }
+
+ .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+  background-color: rgba(1,1,1,.6);
+  color: white;
+
+    ul {
+      float: left;
+      list-style: none;
+      li {
+        float: left;
+        margin-left: 15px;
+        font-size: 16px;
+      }
+  }
+}

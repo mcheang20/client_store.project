@@ -1,12 +1,27 @@
-<h1>Cart</h1>
-<div>
-  <% @cart.orders.each do |order| %>
-     <%= order.product.name %>
-     <%= order.quantity %>
-     <%= number_to_currency(order.product.price) %>
-   <% end %>
+<h1 class="cart-title">Cart</h1>
+<div class="table-cart">
+  <table class="table table-hovered">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Quantity</th>
+        <th>Price</th>
+      <tr>
+    </thead>
+    <tbody>
+        <% @cart.orders.each do |order| %>
+        <tr>
+           <td><%= image_tag(order.product.image.url(:thumb)) %> <%= order.product.name %></td>
+           <td></br><%= order.quantity %></td>
+           <td></br><%= number_to_currency(order.product.price) %></td>
+         <% end %>
+       </tr>
+    </tbody>
+  </table>
+</div>
 
-  <%= number_to_currency(@cart.total_price) %>
+<div class="cart-checkout pull-right">
+  <p><strong>Total:</strong> <%= number_to_currency(@cart.total_price) %></p>
   <%= form_tag checkout_cart_path(@cart) do %>
     <script class='stripe-button' src="https://checkout.stripe.com/checkout.js"
     data-key="pk_test_5YfcwOLRWfzdZ4HHQSRhmmYr"
@@ -21,16 +36,16 @@
   <% end %>
 
   <form action="/your-server-side-code" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_5YfcwOLRWfzdZ4HHQSRhmmYr"
-    data-amount="999"
-    data-name="Demo Site"
-    data-description="Widget"
-    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="auto"
-    shippingAddress="true"
-    billingAddress="true"
-  </script>
-</form>
+    <script
+      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="pk_test_5YfcwOLRWfzdZ4HHQSRhmmYr"
+      data-amount="999"
+      data-name="Demo Site"
+      data-description="Widget"
+      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+      data-locale="auto"
+      shippingAddress="true"
+      billingAddress="true"
+    </script>
+  </form>
 </div>
