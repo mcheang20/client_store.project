@@ -1,6 +1,11 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.products-index {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .item-info {
   text-align: center;
   &:hover .item-cap {
@@ -9,7 +14,10 @@
 }
 
 .item-cap {
-  font-size: 20px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-shadow: 0 0 10px black;
   color: white;
   position: absolute;
   left: 0;
@@ -18,12 +26,19 @@
   margin-top: -190px;
   opacity: 0;
   transition: all 0.5s;
+    a {
+      color: white;
+      font-size: 28px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
 }
 
 .img-tog {
     img{
     height: 300px;
-    width: 300px;
+    width: 400px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
      -ms-transition: all 1s ease;
@@ -38,13 +53,54 @@
        -moz-transform: scale(1.1);
        -webkit-transform: scale(1.1);
        transform: scale(1.1);
-       filter: blur(10px);
-      -webkit-filter: blur(10px);
-      -moz-filter: blur(10px);
-      -ms-filter: blur(10px);
+       filter: blur(100px);
+      -webkit-filter: blur(100px);
+      -moz-filter: blur(100px);
+      -ms-filter: blur(100px);
         filter: url(#blur1);
 
-        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5'); 
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
      }
    }
+}
+
+.products-page {
+  padding-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.product-info {
+  min-height: 600px;
+
+  img {
+    height: 600px;
+  }
+
+  h1 {
+    color: #333d47;
+  }
+}
+
+.product-thumbnails {
+  margin-top: 40px;
+  margin-right: -65px;
+
+  img {
+  }
+}
+
+.checkout-btn {
+  .btn {
+    background-color: grey;
+   }
+
+  a {
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

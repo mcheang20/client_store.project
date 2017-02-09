@@ -12,13 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
-//= require bootstrap/modal
 //= require_tree .
+
 $(document).ready(function(){
   setTimeout(function(){
     $('.alert-wrapper').fadeOut("slow", function(){
             $(this).remove();
               })
   }, 3000);
+});
+
+$(document).ready(function(){
+  $("img").click(function(e) {
+    var newclass = $(this).attr("#product-image");
+    var oldclass = $(this).attr("#main-image");
+    $("#main-image").fadeOut(function() {
+      $("#main-image").removeClass(oldclass).addClass(newclass).fadeIn('slow');
+    })
+  })
 });

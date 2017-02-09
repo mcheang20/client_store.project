@@ -1,7 +1,5 @@
 class ProductsController < ApplicationController
 
-  before_action :require_sign_in, except: [:index, :show]
-
   def index
     @user = current_user
     @products = Product.all

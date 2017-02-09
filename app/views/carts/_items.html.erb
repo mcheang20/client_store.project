@@ -1,10 +1,10 @@
 <h1>Cart</h1>
 <div>
   <% @cart.orders.each do |order| %>
-    <%= order.product.name %>
-    <%= order.quantity %>
-    <%= number_to_currency(order.product.price) %>
-  <% end %>
+     <%= order.product.name %>
+     <%= order.quantity %>
+     <%= number_to_currency(order.product.price) %>
+   <% end %>
 
   <%= number_to_currency(@cart.total_price) %>
   <%= form_tag checkout_cart_path(@cart) do %>
@@ -15,6 +15,8 @@
     data-description="Item Order"
     data-locale="auto"
     data-panel-label="Checkout"
+    data-billingAddress="true"
+    data-shippingAddress="true"
     </script>
   <% end %>
 
@@ -27,6 +29,8 @@
     data-description="Widget"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
     data-locale="auto"
+    shippingAddress="true"
+    billingAddress="true"
   </script>
 </form>
 </div>
