@@ -12,10 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require lightbox
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'lightbox';
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -60,7 +62,6 @@
   font-weight: 300;
   font-size: 16px;
   letter-spacing: .5px;
-  margin-top: -20px;
 }
 
  #myCarousel {

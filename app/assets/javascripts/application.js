@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require lightbox
 //= require_tree .
 
 $(document).ready(function(){
@@ -19,7 +20,7 @@ $(document).ready(function(){
     $('.alert-wrapper').fadeOut("slow", function(){
             $(this).remove();
               })
-  }, 3000);
+  }, );
 });
 
 $(document).ready(function(){

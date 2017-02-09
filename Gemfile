@@ -61,3 +61,5 @@ gem 'stripe'
 gem 'font-awesome-sass'
 
 gem 'redcarpet'
+
+gem 'lightbox2-rails'
