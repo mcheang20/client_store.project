@@ -38,7 +38,7 @@ body {
    z-index: 100;
    width: 100%;
    padding-top: 15px;
-   height: 50px;
+   height: 100px;
 
     li {
       list-style: none;
@@ -47,7 +47,7 @@ body {
     }
 
     img {
-      height: 40px;
+      height: 80px;
       margin-top: -9px;
     }
 
@@ -60,6 +60,11 @@ body {
           text-decoration: none;
         }
     }
+ }
+
+ #nav-links {
+   margin-top: 20px;
+   margin-left: 10px;
  }
 
 .alert-wrapper {
@@ -118,13 +123,13 @@ body {
 }
 
 .search-bar {
-  input[type="submit"] {
-    border: none;
-    background-color: inherit;
-   }
-
    input[type="text"] {
      border-radius: 5px;
      border: 1px solid rgba(1,1,1,.2);
+    }
+
+    .btn {
+      background-color: inherit;
+      border: none;
     }
 }

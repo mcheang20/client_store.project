@@ -44,9 +44,18 @@
    </div>
 </div>
 
-<section class="featured">
+<section class="featured container">
   <h1>Featured Products</h1>
   <% @products.take(3).each do |product| %>
+  <div class="thumbnail-info col-sm-4">
     <%= link_to image_tag(product.image.url(:medium)), product_path(product) %>
+    <p><%= product.name %></p>
+  </div>
   <% end %>
 </section>
+
+<svg xmlns="http://www.w3.org/2000/svg">
+  <filter id="blur1">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+</svg>

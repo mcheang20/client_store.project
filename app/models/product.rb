@@ -9,6 +9,6 @@ class Product < ActiveRecord::Base
   # search method for development env use LIKE
   # for production use ILIKE
   def self.search(search)
-     where("name ILIKE ?", "%#{search}%")
+     where("name LIKE ?", "%#{search}%")
   end
 end
