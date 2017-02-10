@@ -20,7 +20,7 @@ $(document).ready(function(){
     $('.alert-wrapper').fadeOut("slow", function(){
             $(this).remove();
               })
-  }, );
+  }, 3000);
 });
 
 $(document).ready(function(){

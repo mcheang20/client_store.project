@@ -1,8 +1,12 @@
 class ProductsController < ApplicationController
 
   def index
-    @user = current_user
     @products = Product.all
+    if params[:search]
+      @products = Product.search(params[:search]).order("created_at DESC")
+    else
+      @products = Product.all.order('created_at DESC')
+    end
   end
 
   def show
@@ -57,12 +61,14 @@ class ProductsController < ApplicationController
     if session[:cart_id].blank?
       cart = Cart.create(status: "pending")
       session[:cart_id] = cart.id
+      flash[:notice] = "Item added to cart"
     else
       cart = Cart.find(session[:cart_id])
     end
 
     product = Product.find(params[:id])
     cart.orders.create(product_id: product.id, quantity: 1)
+    flash[:notice] = "Item added to cart"
     redirect_to cart
   end
 

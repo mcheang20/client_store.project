@@ -82,7 +82,7 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     color: grey;
   }
@@ -92,11 +92,17 @@
   margin-top: 40px;
   margin-right: -65px;
   min-height: 400px;
+
+    img {
+      height: 250px;
+      width: 320px;
+    }
 }
 
 .checkout-btn {
   .btn {
-    background-color: grey;
+    background-color: tomato;
+    border: 1px solid tomato;
    }
 
   a {

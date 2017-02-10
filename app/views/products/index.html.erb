@@ -1,8 +1,5 @@
 <div class="products-index">
   <h1 class="title">Products</h1>
-  <% if current_user_authorized? %>
-    <%= link_to "Add Product", new_product_path, class: 'btn btn-primary'%>
-  <% end %>
     <div class="row">
       <% @products.each do |product| %>
        <div class="item-info col-md-4">

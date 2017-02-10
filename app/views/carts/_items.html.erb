@@ -11,9 +11,10 @@
     <tbody>
         <% @cart.orders.each do |order| %>
         <tr>
-           <td><%= image_tag(order.product.image.url(:thumb)) %> <%= order.product.name %></td>
+           <td><%= link_to image_tag(order.product.image.url(:thumb)), product_path(order.product) %> <%= order.product.name %></td>
            <td></br><%= order.quantity %></td>
            <td></br><%= number_to_currency(order.product.price) %></td>
+           <td></br><%= link_to "x", [order.cart, order], method: :delete, data: {confirm: 'Are you sure you want to remove this item from your cart?'} %></td>
          <% end %>
        </tr>
     </tbody>

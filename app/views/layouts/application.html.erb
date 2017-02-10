@@ -12,17 +12,28 @@
   <nav class="navbar-top">
       <li><%= link_to image_tag("logo.png"), root_path %></li>
       <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Products", products_path %></li>
+      <li><%= link_to "Items", products_path %></li>
+      <li>
+        <% if current_user_authorized? %>
+          <%= link_to "Add Item", new_product_path %>
+        <% end %>
+      </li>
       <% if current_user.present? %>
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'pull-right' %>
+        <li class="pull-right"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
       <% end %>
       <% if @cart.present? %>
-        <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart(#{@cart.products.count})" , cart_path(@cart)%></li>
+        <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart(#{@cart.products.count})", cart_path(@cart)%></li>
       <% else %>
-        <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i><%= link_to "Cart" , carts_path %></li>
+        <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart", carts_path %></li>
       <% end %>
       <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-facebook"></i></a></li>
       <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-instagram"></i></a></li>
+      <li class="search-bar pull-right">
+         <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+           <%= text_field_tag :search, params[:search], placeholder: "Search Item" %>
+           <%= submit_tag "Search", :name => nil %>
+         <% end %>
+      </li>
   </nav>
   <% if flash[:notice] %>
       <div class="alert-wrapper">

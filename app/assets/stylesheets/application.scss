@@ -33,6 +33,7 @@ body {
 
  .navbar-top {
    background-color: #fafafa;
+   border-bottom: 1px solid rgba(1,1,1,.2);
    top: 0;
    z-index: 100;
    width: 100%;
@@ -72,15 +73,12 @@ body {
   font-weight: 300;
   font-size: 16px;
   letter-spacing: .5px;
+  margin-top: 15px;
 }
-
- #myCarousel {
-   position: relative;
-   top: 0;
- }
 
  .cart-btn {
    margin-right: 25px;
+   margin-top: -3px;
 
     i {
       font-size: 26px;
@@ -117,4 +115,16 @@ body {
         font-size: 16px;
       }
   }
+}
+
+.search-bar {
+  input[type="submit"] {
+    border: none;
+    background-color: inherit;
+   }
+
+   input[type="text"] {
+     border-radius: 5px;
+     border: 1px solid rgba(1,1,1,.2);
+    }
 }
