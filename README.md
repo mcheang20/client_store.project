@@ -1,2 +1,2 @@
-#Shoppelyft
+#Adroit
 ##Online Web Store

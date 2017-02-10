@@ -15,10 +15,13 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @categories = Category.all.map{|c| [c.name, c.id] }
   end
 
   def create
     @product = Product.new(product_params)
+    @product.category_id = params[:category_id]
+    @categories = Category.all.map{|c| [c.name, c.id] }
 
     if @product.save
       flash[:notice] = "Product was added successfully."
@@ -31,10 +34,12 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @categories = Category.all.map{|c| [c.name, c.id ] }
   end
 
   def update
     @product = Product.find(params[:id])
+    @wiki.category_id = params[:category_id]
 
     if @product.update_attributes(product_params)
       flash[:notice] = "Product was updated successfully."
@@ -75,6 +80,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :description, :image)
+    params.require(:product).permit(:name, :price, :description, :category_id, :image)
   end
 end

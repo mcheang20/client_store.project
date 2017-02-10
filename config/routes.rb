@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get :add_to_cart
     end
   end
+  resources :categories, only: [:index, :new, :create,:show]
 
   get "home/welcome"
   root 'home#welcome'
