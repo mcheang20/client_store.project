@@ -39,7 +39,7 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    @wiki.category_id = params[:category_id]
+    @product.category_id = params[:category_id]
 
     if @product.update_attributes(product_params)
       flash[:notice] = "Product was updated successfully."
