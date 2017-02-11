@@ -31,6 +31,10 @@ body {
    margin: 0 0 75px;
 }
 
+.active-link {
+  border-bottom: 2px solid tomato;
+}
+
  .navbar-top {
    background-color: #fafafa;
    border-bottom: 1px solid rgba(1,1,1,.1);
@@ -44,6 +48,16 @@ body {
       list-style: none;
       float: left;
       margin-left: 15px;
+      background-size: 100% 202%;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+       -ms-transition: all 0.2s ease;
+      animation: bounce-down 0.4s ease;
+        &:hover {
+          background-position: 100% 100%;
+          animation: bounce-up 0.4s ease;
+        }
     }
 
     img {
@@ -57,9 +71,21 @@ body {
       font-weight: 400;
         &:hover {
           text-decoration: none;
+          color: #ccc;
         }
     }
  }
+
+ @keyframes bounce-up {
+  0% { padding-top: .5em; }
+  50% { padding-top: .25em; }
+  100% { padding-top: .5em; }
+}
+@keyframes bounce-down {
+  0% { padding-top: .5em; }
+  50% { padding-top: 1em; }
+  100% { padding-top: .5em; }
+}
 
  #nav-links {
    margin-top: 20px;

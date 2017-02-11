@@ -2,7 +2,7 @@
   <p>No Items for sale yet.</p>
 <% else %>
 <div class="products-index">
-  <h1 class="title">Products</h1>
+  <h1 class="title"><%= @category.name %></h1>
   <div class="row">
     <% @category.products.each do |product| %>
       <div class="item-info col-md-4">

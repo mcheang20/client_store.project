@@ -1,9 +1,9 @@
 <div class="products-index">
-  <h1 class="title">All Items</h1>
+  <h1 class="title">Browse all our products</h1>
   <div class="row">
     <% @products.each do |product| %>
       <div class="item-info col-md-4">
-        <div class="img-tog"><%= link_to image_tag(product.image.url(:medium)), product%></div>
+        <li class="img-tog"><%= link_to image_tag(product.image.url(:medium)), product%></li>
         <p class="item-cap"><%= link_to product.name, product %></p></br></br>
         <p class="item-cap"><%= number_to_currency(product.price)%></p></br>
       </div>

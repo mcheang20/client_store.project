@@ -23,12 +23,19 @@ $(document).ready(function(){
   }, 3000);
 });
 
-$(document).ready(function(){
-  $("img").click(function(e) {
-    var newclass = $(this).attr("#product-image");
-    var oldclass = $(this).attr("#main-image");
-    $("#main-image").fadeOut(function() {
-      $("#main-image").removeClass(oldclass).addClass(newclass).fadeIn('slow');
-    })
-  })
+$(document).ready(function() {
+    $("nav .box [href]").each(function() {
+        if (this.href == window.location.href) {
+            $(this).addClass("active-link");
+        }
+    });
 });
+
+$(".item-info li").each(function (i) {
+    $(this).attr("style", "-webkit-animation-delay:" + i * 200 + "ms;"
+                 + "-moz-animation-delay:" + i * 200 + "ms;"
+                 + "-o-animation-delay:" + i * 200 + "ms;"
+                 + "animation-delay:" + i * 200 + "ms;");
+    if (i == $(".item-info li").size() -1) {
+        $(".item-info").addClass("play")
+    }
