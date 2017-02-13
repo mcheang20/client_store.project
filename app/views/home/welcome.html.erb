@@ -10,9 +10,9 @@
     <div class="item active">
       <img style="width:1500px; height:700px;" src="https://pixabay.com/get/e03cb4092af01c22d2524518a33219c8b66ae3d111b7184794f6c87f/hats-995624_1280.jpg">
       <div class="carousel-caption" id="carousel-item-one">
-       <h1>Welcome to Adroit</h1>
-       <%= link_to "Shop Now", "#", class: 'btn' %>
-     </div>
+         <h1>Welcome to Adroit</h1>
+         <%= link_to "Shop Now", "#", class: 'btn' %>
+       </div>
    </div>
    <div class="item">
       <img style="width:1500px; height:700px;" src="https://pixabay.com/get/e831b00f20f6023ed1534705fb094293e777e1d018ac10459df6c87fa3edb4bf/bag-1410823_1920.jpg">
@@ -50,10 +50,10 @@
 <section class="featured container">
   <h1>On Sale Now</h1>
   <% @products.take(3).each do |product| %>
-  <div class="thumbnail-info col-sm-4">
-    <%= link_to image_tag(product.image.url(:medium)), product_path(product) %>
-    <p><%= product.name %></p>
-  </div>
+    <div class="thumbnail-info col-sm-4">
+      <%= link_to image_tag(product.image.url(:medium)), product_path(product) %>
+      <p><%= product.name %></p>
+    </div>
   <% end %>
 </section>
 

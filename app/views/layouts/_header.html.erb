@@ -25,8 +25,8 @@
       <li class="search-bar pull-right">
          <%= form_tag(products_path, :method => "get", id: "search-form") do %>
            <%= text_field_tag :search, params[:search], placeholder: "Search" %>
-           <%= button_tag(type: "submit", class: "btn") do %>
-            <i class="fa fa-search"></i>
+             <%= button_tag(type: "submit", class: "btn") do %>
+              <i class="fa fa-search"></i>
            <% end %>
          <% end %>
       </li>

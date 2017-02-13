@@ -40,11 +40,11 @@ private
    params.require(:pic).permit(:image)
  end
 
-   def authorize_user
-     pic = Pic.find(params[:id])
-   unless current_user.admin?
-     flash[:alert] = "You do not have permission to delete this image"
-     redirect_to [pic.product]
-   end
+  def authorize_user
+    pic = Pic.find(params[:id])
+    unless current_user.admin?
+      flash[:alert] = "You do not have permission to delete this image"
+      redirect_to [pic.product]
+    end
   end
 end

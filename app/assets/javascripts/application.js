@@ -39,4 +39,4 @@ $(".item-info li").each(function (i) {
     if (i == $(".item-info li").size() -1) {
         $(".item-info").addClass("play")
     }
-  });
+});
