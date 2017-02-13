@@ -56,6 +56,10 @@ body {
             color: grey;
           }
         }
+
+        i {
+          color: white;
+        }
     }
 
     li {
@@ -79,7 +83,7 @@ body {
     }
  }
 
- @keyframes bounce-up {
+@keyframes bounce-up {
   0% { padding-top: .5em; }
   50% { padding-top: .25em; }
   100% { padding-top: .5em; }
@@ -123,7 +127,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   letter-spacing: .5px;
-  margin-top: 15px;
+  margin-top: 100px;
 }
 
  .cart-btn {

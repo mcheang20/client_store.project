@@ -26,6 +26,13 @@
     }
 }
 
+.carousel-image{
+  img {
+    width: 1500px;
+    height: 640px;
+  }
+}
+
 .feature-item:hover #feature-cap{
   opacity: 1;
 }
@@ -119,6 +126,24 @@
   margin-bottom: 20px;
 
     img {
+      width: 560px;
+      height: 400px;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+       -ms-transition: all 1s ease;
+           transition: all 1s ease;
+           &:hover {
+             -moz-transform: scale(1.05);
+             -webkit-transform: scale(1.05);
+             transform: scale(1.05);
+           }
+    }
+}
+
+.feature-image-collection {
+  margin-bottom: 20px;
+
+    img {
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
        -ms-transition: all 1s ease;
@@ -168,11 +193,11 @@
 
 @keyframes fadeIn {
     from {
-        top: 0px;
+        top: 200px;
         opacity:0;
     }
     to {
-        top: 250px;
+        top: 380px;
         opacity:1;
     }
 }
