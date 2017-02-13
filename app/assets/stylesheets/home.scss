@@ -169,6 +169,30 @@
   margin-top: -720px;
 }
 
+#carousel-item-one {
+  margin-bottom: 100px;
+  animation: fadeIn 1.5s;
+   -moz-animation: fadeIn 1.5s; /* Firefox */
+   -webkit-animation: fadeIn 1.5s; /* Safari and Chrome */
+   -o-animation: fadeIn 1.5s; /* Opera */
+
+    h1 {
+        font-size: 60px;
+        font-weight: 200;
+        color: #1b1d1c;
+      }
+
+    a {
+      font-size: 25px;
+      color: #1b1d1c;
+    }
+
+    .btn {
+      border: 2px solid #1b1d1c;
+    }
+}
+
+
 #carousel-item{
   margin-bottom: 100px;
   animation: fadeIn 1.5s;
@@ -197,7 +221,7 @@
         opacity:0;
     }
     to {
-        top: 380px;
+        top: 383px;
         opacity:1;
     }
 }
