@@ -1,3 +1,4 @@
+<% provide(:nav_style, "transparent-nav") %>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -8,29 +9,23 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="http://www.mindfulstudiomag.com/wp-content/uploads/2016/10/shutterstock_326725514-1web.jpg">
-      <div class="carousel-caption">
-        <div>
-         <h1>Welcome to Travelog</h1>
-         <p>Travel, Share, and Explore</p>
-        </div>
+      <div class="carousel-caption" id="carousel-item">
+       <h1>Welcome to Adroit</h1>
+       <%= link_to "Shop Now", "#", class: 'btn' %>
      </div>
    </div>
    <div class="item">
       <img src="http://11337-presscdn-0-2.pagely.netdna-cdn.com/wp-content/uploads/2016/08/Take-better-photos-feature-7.jpg">
-      <div class="carousel-caption">
-        <div>
-          <h1>Log Your Adventures</h1>
-          <p>A diary for events, vacations, and adventures</p>
-        </div>
+      <div class="carousel-caption" id="carousel-item">
+        <h1>Log Your Adventures</h1>
+        <%= link_to "Shop Now", "#", class: 'btn' %>
       </div>
     </div>
     <div class="item">
        <img src="http://www.moahawaii.org/wp-content/uploads/2013/02/s-nature-bg2-1500x600.jpg">
-       <div class="carousel-caption">
-         <div>
-           <h1>Explore the World</h1>
-           <p>Find your next adventure</p>
-         </div>
+       <div class="carousel-caption" id="carousel-item">
+         <h1>Explore the World</h1>
+         <%= link_to "Shop Now", "#", class: 'btn' %>
        </div>
      </div>
      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -44,14 +39,43 @@
    </div>
 </div>
 
+<section class="feature-item">
+  <img src="https://static1.squarespace.com/static/57e557ab9de4bb765144cdf5/57e92aa5be6594ead4a5eaa6/58519a1abebafb0499f4c1c0/1481742884184/PUP+Twitter+Header+02.png?format=1500w">
+  <div id="feature-cap">
+    <p>Featured Item Power Pin Ups</p>
+    <%= link_to "Shop Now", "#", class: 'btn' %>
+  </div>
+</section>
+
 <section class="featured container">
-  <h1>Featured Products</h1>
+  <h1>On Sale Now</h1>
   <% @products.take(3).each do |product| %>
   <div class="thumbnail-info col-sm-4">
     <%= link_to image_tag(product.image.url(:medium)), product_path(product) %>
     <p><%= product.name %></p>
   </div>
   <% end %>
+</section>
+
+<section class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="feature-image">
+        <%= link_to image_tag("https://s-media-cache-ak0.pinimg.com/736x/d5/e3/51/d5e3515eb4bbd10013e5223981e6bf85.jpg"), category_path(2) %>
+        <span class="image-caption" style="color:white;">Accessories</span>
+      </div>
+      <div class="feature-image">
+        <%= link_to image_tag("https://s-media-cache-ak0.pinimg.com/736x/d5/e3/51/d5e3515eb4bbd10013e5223981e6bf85.jpg"), category_path(1) %>
+        <span class="image-caption" style="color:white;">Apparel</span>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="feature-image">
+        <%= link_to image_tag("http://cdn.iphonephotographyschool.com/wp-content/uploads/Balog.jpg"), "#" %>
+        <span class="image-caption" id="cap" style="color:white;">Collection</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <svg xmlns="http://www.w3.org/2000/svg">

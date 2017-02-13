@@ -13,12 +13,63 @@
   }
 }
 
+.feature-item {
+  margin-top: 75px;
+    img {
+      height: 450px;
+      width: 100%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      &:hover {
+        opacity: .6;
+      }
+    }
+}
+
+.feature-item:hover #feature-cap{
+  opacity: 1;
+}
+
+#feature-cap {
+  position: absolute;
+  transition: .5s ease;
+  opacity: 0;
+  z-index: 100;
+  left: 500px;
+  margin-top: -300px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+    p {
+      font-size: 55px;
+      font-weight: 700;
+    }
+
+    a {
+      font-size: 35px;
+      color: white;
+        &:hover {
+          color: #1b1d1c;
+        }
+    }
+
+    .btn {
+      border: 1px solid #1b1d1c;
+      background-color: #1b1d1c;
+      &:hover {
+        background-color: white;
+        border: 1px solid white;
+      }
+    }
+}
+
 .featured {
   text-align: center;
   margin-bottom: 75px;
 
     h1 {
-      font-weight: 300;
+      font-weight: 600;
+      text-transform: uppercase;
     }
 
     p {
@@ -62,4 +113,77 @@
           filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
        }
      }
+}
+
+.feature-image {
+  margin-bottom: 20px;
+
+    img {
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+       -ms-transition: all 1s ease;
+           transition: all 1s ease;
+           &:hover {
+             -moz-transform: scale(1.05);
+             -webkit-transform: scale(1.05);
+             transform: scale(1.05);
+           }
+    }
+}
+
+.image-caption {
+  position: absolute;
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  left: 50px;
+  margin-top: -380px;
+}
+
+#cap {
+  margin-top: -720px;
+}
+
+#carousel-item{
+  margin-bottom: 100px;
+  animation: fadeIn 1.5s;
+   -moz-animation: fadeIn 1.5s; /* Firefox */
+   -webkit-animation: fadeIn 1.5s; /* Safari and Chrome */
+   -o-animation: fadeIn 1.5s; /* Opera */
+
+    h1 {
+        font-size: 60px;
+        font-weight: 200;
+      }
+
+    a {
+      font-size: 25px;
+      color: white;
+    }
+
+    .btn {
+      border: 2px solid white;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        top: 0px;
+        opacity:0;
+    }
+    to {
+        top: 250px;
+        opacity:1;
+    }
+}
+
+@-webkit-@keyframes fadeIn {
+    from {
+        top: 0px;
+        opacity:0;
+    }
+    to {
+        top: 245px;
+        opacity:1;
+    }
 }
