@@ -16,7 +16,7 @@
         <li class="pull-right"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
       <% end %>
       <% if @cart.present? %>
-        <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart(#{@cart.products.count})", cart_path(@cart)%></li>
+        <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart", cart_path(@cart)%><span class="badge"><%=@cart.products.count%></span></li>
       <% else %>
         <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart", carts_path %></li>
       <% end %>

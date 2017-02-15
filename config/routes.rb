@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     end
   end
   resources :categories, only: [:index, :new, :create,:show]
+  resources :subscribers
 
   get "home/welcome"
   root 'home#welcome'

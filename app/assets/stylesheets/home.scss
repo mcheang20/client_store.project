@@ -176,7 +176,7 @@
 
 #carousel-item-one {
   margin-bottom: 100px;
-  right: 800px;
+  right: 600px;
   animation: fadeIn 1.5s;
    -moz-animation: fadeIn 1.5s; /* Firefox */
    -webkit-animation: fadeIn 1.5s; /* Safari and Chrome */
@@ -184,7 +184,7 @@
 
     h1 {
         font-size: 55px;
-        font-weight: 200;
+        font-weight: 400;
         color: #1b1d1c;
       }
 
@@ -208,7 +208,7 @@
 
     h1 {
         font-size: 55px;
-        font-weight: 200;
+        font-weight: 400;
       }
 
     a {
@@ -227,18 +227,18 @@
         opacity:0;
     }
     to {
-        top: 383px;
+        top: 388px;
         opacity:1;
     }
 }
 
 @-webkit-@keyframes fadeIn {
     from {
-        top: 0px;
+        top: 200px;
         opacity:0;
     }
     to {
-        top: 245px;
+        top: 388px;
         opacity:1;
     }
 }
@@ -258,5 +258,5 @@
 }
 
 .collections {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }

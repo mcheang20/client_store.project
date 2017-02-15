@@ -1,13 +1,13 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <ul class="col-md-3" id="social-links">
+      <ul class="col-md-4" id="social-links">
         <h4>Follow Us</h4>
         <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
       </ul>
-      <ul class="col-md-3">
+      <ul class="col-md-4">
         <h4>About Adroit</h4>
         <li><%= link_to "FAQ", "#" %></li>
         <li><%= link_to "Support", "#" %></li>
@@ -15,15 +15,23 @@
         <li><%= link_to "Terms & Conditions", "#" %></li>
         <li><%= link_to "Contact", "#" %></li>
       </ul>
-      <ul class="col-md-3">
-        <h4>Sign up to our newsletter</h4>
-        <li>
-          <%= form_tag(products_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "Send" %>
-          <% end %>
-        </li>
+      <ul class="col-md-4">
+        <% if cookies[:saved_subscriber] %>
+          Thank you for subscribing!
+        <% else %>
+          <h4>Subscribe to our newsletter</h4>
+          <li>
+            <%= form_for subscriber do |f| %>
+              <%= f.text_field :name, placeholder: "Name" %>
+              <%= f.email_field :email, placeholder: "Email" %></br>
+              <%= f.submit "Subscribe", class: 'btn' %>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
+  <div class="copyright container">
+    <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 Adroit</p>
+  <div>
 </footer>

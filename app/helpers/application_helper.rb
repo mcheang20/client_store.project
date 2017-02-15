@@ -20,4 +20,8 @@ module ApplicationHelper
   def category
     @categories = Category.all
   end
+
+  def subscriber
+    @subscriber = Subscriber.new
+  end
 end
