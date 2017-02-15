@@ -40,3 +40,10 @@ $(".item-info li").each(function (i) {
         $(".item-info").addClass("play")
     }
 });
+
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 200) {
+        $('.banner').fadeIn("slow");
+    }
+});
