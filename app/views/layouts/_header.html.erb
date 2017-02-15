@@ -1,34 +1,38 @@
 <nav class="navbar-top <%= yield(:nav_style) %>">
-    <li><%= link_to image_tag("logo.png"), root_path %></li>
-    <div id="nav-links">
-      <li class="box"><%= link_to "Home", root_path %></li>
-      <li class="box"><%= link_to "Browse", products_path %></li>
-      <% category.each do |category| %>
-        <li class="box"><%= link_to category.name, category %></li>
-      <% end %>
-    </div>
-      <li>
-        <% if current_user_authorized? %>
-          <%= link_to "Add Item", new_product_path %>
-        <% end %>
-      </li>
-      <% if current_user.present? %>
-        <li class="pull-right"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-      <% end %>
-      <% if @cart.present? %>
-        <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart", cart_path(@cart)%><span class="badge"><%=@cart.products.count%></span></li>
-      <% else %>
-        <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart", carts_path %></li>
-      <% end %>
-      <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-facebook"></i></a></li>
-      <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-instagram"></i></a></li>
-      <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-twitter"></i></a></li>
-      <li class="search-bar pull-right">
-         <%= form_tag(products_path, :method => "get", id: "search-form") do %>
-           <%= text_field_tag :search, params[:search], placeholder: "Search" %>
-             <%= button_tag(type: "submit", class: "btn") do %>
-              <i class="fa fa-search"></i>
-           <% end %>
-         <% end %>
-      </li>
+  <li><%= link_to image_tag("logo.png"), root_path %></li>
+
+  <div id="nav-links">
+    <li class="box"><%= link_to "Home", root_path %></li>
+    <li class="box"><%= link_to "Browse", products_path %></li>
+    <% category.each do |category| %>
+      <li class="box"><%= link_to category.name, category %></li>
+    <% end %>
+  </div>
+  
+  <li>
+    <% if current_user_authorized? %>
+      <%= link_to "Add Item", new_product_path %>
+    <% end %>
+  </li>
+  <% if current_user.present? %>
+    <li class="pull-right"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+  <% end %>
+
+  <% if @cart.present? %>
+    <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart", cart_path(@cart)%><span class="badge"><%=@cart.products.count%></span></li>
+  <% else %>
+    <li class="cart-btn pull-right"><i class="fa fa-shopping-cart fa-lg"></i> <%= link_to "Cart", carts_path %></li>
+  <% end %>
+
+  <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-facebook"></i></a></li>
+  <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-instagram"></i></a></li>
+  <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-twitter"></i></a></li>
+  <li class="search-bar pull-right">
+     <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+       <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+         <%= button_tag(type: "submit", class: "btn") do %>
+          <i class="fa fa-search"></i>
+       <% end %>
+     <% end %>
+  </li>
 </nav>

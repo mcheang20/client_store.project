@@ -1,21 +1,22 @@
 <% if @category.products.count == 0 %>
   <p>No Items for sale yet.</p>
 <% else %>
-<div class="products-index">
-  <h1 class="title"><%= @category.name %></h1>
-  <div class="row">
-    <% @category.products.each do |product| %>
-      <div class="item-info col-md-4">
-        <div class="img-tog"><%= link_to image_tag(product.image.url(:medium)), product%></div>
-        <p class="item-cap"><%= link_to product.name, product %></p></br></br>
-        <p class="item-cap"><%= number_to_currency(product.price)%></p></br>
-      </div>
-    <% end %>
+  <div class="products-index">
+    <h1 class="title"><%= @category.name %></h1>
+    <div class="row">
+      <% @category.products.each do |product| %>
+        <div class="item-info col-md-4">
+          <div class="img-tog"><%= link_to image_tag(product.image.url(:medium)), product%></div>
+          <p class="item-cap"><%= link_to product.name, product %></p></br></br>
+          <p class="item-cap"><%= number_to_currency(product.price)%></p></br>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>
+
 <svg xmlns="http://www.w3.org/2000/svg">
   <filter id="blur1">
     <feGaussianBlur stdDeviation="3"/>
   </filter>
 </svg>
-<% end %>

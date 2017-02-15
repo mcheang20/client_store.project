@@ -79,86 +79,85 @@
   text-align: center;
   margin-bottom: 75px;
 
-    h1 {
-      font-weight: 600;
-      text-transform: uppercase;
+  h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  p {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.5s;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 0 10px black;
+    &:hover {
+      text-decoration: none;
     }
+  }
 
-    p {
-      position: absolute;
-      top: 100px;
-      left: 0;
-      right: 0;
-      font-size: 16px;
-      opacity: 0;
-      transition: all 0.5s;
-      color: white;
-      font-size: 18px;
-      text-shadow: 0 0 10px black;
-          &:hover {
-            text-decoration: none;
-          }
-        }
+  img {
+    height: 200px;
+    margin: 20px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -ms-filter: blur(0);
+    &:hover {
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      filter: blur(100px);
+      -webkit-filter: blur(100px);
+      -moz-filter: blur(100px);
+      -ms-filter: blur(100px);
+      filter: url(#blur1);
 
-    img {
-      height: 200px;
-      margin: 20px;
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-       -ms-transition: all 1s ease;
-           transition: all 1s ease;
-           filter: blur(0);
-      -webkit-filter: blur(0);
-      -moz-filter: blur(0);
-      -ms-filter: blur(0);
-
-       &:hover {
-         -moz-transform: scale(1.1);
-         -webkit-transform: scale(1.1);
-         transform: scale(1.1);
-         filter: blur(100px);
-        -webkit-filter: blur(100px);
-        -moz-filter: blur(100px);
-        -ms-filter: blur(100px);
-          filter: url(#blur1);
-
-          filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
-       }
-     }
+      filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+    }
+  }
 }
 
 .feature-image {
   margin-bottom: 20px;
 
-    img {
-      width: 560px;
-      height: 400px;
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-       -ms-transition: all 1s ease;
-           transition: all 1s ease;
-           &:hover {
-             -moz-transform: scale(1.05);
-             -webkit-transform: scale(1.05);
-             transform: scale(1.05);
-           }
-    }
+  img {
+    width: 560px;
+    height: 400px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+      &:hover {
+       -moz-transform: scale(1.05);
+       -webkit-transform: scale(1.05);
+       transform: scale(1.05);
+     }
+   }
 }
 
 .feature-image-collection {
   margin-bottom: 20px;
 
-    img {
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-       -ms-transition: all 1s ease;
-           transition: all 1s ease;
-           &:hover {
-             -moz-transform: scale(1.05);
-             -webkit-transform: scale(1.05);
-             transform: scale(1.05);
-           }
+  img {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    &:hover {
+      -moz-transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
     }
+  }
 }
 
 .image-caption {
@@ -178,47 +177,47 @@
   margin-bottom: 100px;
   right: 600px;
   animation: fadeIn 1.5s;
-   -moz-animation: fadeIn 1.5s; /* Firefox */
-   -webkit-animation: fadeIn 1.5s; /* Safari and Chrome */
-   -o-animation: fadeIn 1.5s; /* Opera */
+  -moz-animation: fadeIn 1.5s; /* Firefox */
+  -webkit-animation: fadeIn 1.5s; /* Safari and Chrome */
+  -o-animation: fadeIn 1.5s; /* Opera */
 
-    h1 {
-        font-size: 55px;
-        font-weight: 400;
-        color: #1b1d1c;
-      }
+  h1 {
+    font-size: 55px;
+    font-weight: 400;
+    color: #1b1d1c;
+  }
 
-    a {
-      font-size: 25px;
-      color: #1b1d1c;
-    }
+  a {
+    font-size: 25px;
+    color: #1b1d1c;
+  }
 
-    .btn {
-      border: 2px solid #1b1d1c;
-    }
+  .btn {
+    border: 2px solid #1b1d1c;
+  }
 }
 
 
 #carousel-item{
   margin-bottom: 100px;
   animation: fadeIn 1.5s;
-   -moz-animation: fadeIn 1.5s; /* Firefox */
-   -webkit-animation: fadeIn 1.5s; /* Safari and Chrome */
-   -o-animation: fadeIn 1.5s; /* Opera */
+  -moz-animation: fadeIn 1.5s; /* Firefox */
+  -webkit-animation: fadeIn 1.5s; /* Safari and Chrome */
+  -o-animation: fadeIn 1.5s; /* Opera */
 
-    h1 {
-        font-size: 55px;
-        font-weight: 400;
-      }
+  h1 {
+    font-size: 55px;
+    font-weight: 400;
+  }
 
-    a {
-      font-size: 25px;
-      color: white;
-    }
+  a {
+    font-size: 25px;
+    color: white;
+  }
 
-    .btn {
-      border: 2px solid white;
-    }
+  .btn {
+    border: 2px solid white;
+  }
 }
 
 @keyframes fadeIn {
@@ -249,12 +248,12 @@
   width: 100%;
   display: none;
 
-    p{
-      text-align: center;
-      font-size: 50px;
-      color: white;
-      text-transform: uppercase;
-    }
+  p{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+  }
 }
 
 .collections {

@@ -28,41 +28,41 @@
   margin-top: -190px;
   opacity: 0;
   transition: all 0.5s;
-    a {
-      color: white;
-      font-size: 28px;
-      &:hover {
-        text-decoration: none;
-      }
+
+  a {
+    color: white;
+    font-size: 28px;
+    &:hover {
+      text-decoration: none;
     }
+  }
 }
 
 .img-tog {
-    img{
+  img{
     height: 300px;
     width: 400px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
-     -ms-transition: all 1s ease;
-         transition: all 1s ease;
-         filter: blur(0);
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    filter: blur(0);
     -webkit-filter: blur(0);
     -moz-filter: blur(0);
     -ms-filter: blur(0);
-
-     &:hover {
-       -moz-transform: scale(1.1);
-       -webkit-transform: scale(1.1);
-       transform: scale(1.1);
-       filter: blur(100px);
+    &:hover {
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      filter: blur(100px);
       -webkit-filter: blur(100px);
       -moz-filter: blur(100px);
       -ms-filter: blur(100px);
-        filter: url(#blur1);
+      filter: url(#blur1);
 
-        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
-     }
-   }
+      filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+    }
+  }
 }
 
 .products-page {
@@ -100,10 +100,10 @@
   margin-right: -65px;
   min-height: 400px;
 
-    img {
-      height: 250px;
-      width: 320px;
-    }
+  img {
+    height: 250px;
+    width: 320px;
+  }
 }
 
 .checkout-btn {
