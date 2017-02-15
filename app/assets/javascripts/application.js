@@ -42,8 +42,8 @@ $(".item-info li").each(function (i) {
 });
 
 $(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 200) {
+    var ban = $(this).scrollTop();
+    if (ban > 200) {
         $('.banner').fadeIn("slow");
     }
 });

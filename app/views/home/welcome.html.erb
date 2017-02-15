@@ -43,28 +43,6 @@
   <p>Free shipping on orders over <strong>$75</strong></p>
 </div>
 
-<%#= !!comment start!!
-
-<section class="feature-item">
-  <img src="https://static1.squarespace.com/static/57e557ab9de4bb765144cdf5/57e92aa5be6594ead4a5eaa6/58519a1abebafb0499f4c1c0/1481742884184/PUP+Twitter+Header+02.png?format=1500w">
-  <div id="feature-cap">
-    <p>Featured Item Power Pin Ups</p>
-    <%= link_to "Shop Now", "#", class: 'btn'
-  </div>
-</section>
-
-<%#= add end block to line 54,56,59 if adding this section
-
-<section class="featured container">
-  <h1>On Sale Now</h1>
-  <% @products.take(3).each do |product|
-   <div class="thumbnail-info col-sm-4">
-      <%= link_to image_tag(product.image.url(:medium)), product_path(product)
-      <p><%= product.name </p>
-    </div>
-  <% end
-</section> %>
-
 <section class="collections container">
   <div class="row">
     <div class="col-sm-12">
