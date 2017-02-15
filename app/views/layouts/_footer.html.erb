@@ -21,11 +21,7 @@
         <% else %>
           <h4>Subscribe to our newsletter</h4>
           <li>
-            <%= form_for subscriber do |f| %>
-              <%= f.text_field :name, placeholder: "Name" %>
-              <%= f.email_field :email, placeholder: "Email" %></br>
-              <%= f.submit "Subscribe", class: 'btn' %>
-            <% end %>
+            <%= render 'subscribers/form' %>
           </li>
         <% end %>
       </ul>
