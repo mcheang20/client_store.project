@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .welcome-header {
-  background-image: url("https://static.pexels.com/photos/65900/accessories-beach-blue-feminine-65900.jpeg");
+  background-image: url("https://static.pexels.com/photos/157888/fashion-glasses-go-pro-female-157888.jpeg");
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -24,10 +24,13 @@
   p{
     font-size: 3rem;
     letter-spacing: 1px;
+    color: white;
+    text-shadow: 0 0 5px grey;
   }
   button {
     background: transparent;
-    border: 2px solid;
+    color: white;
+    border: 2px solid white;
     padding-left: 25px;
     padding-right: 25px;
     transition: .5s;
@@ -36,11 +39,12 @@
     }
   }
   a {
+    text-shadow: 0 0 3px grey;
     font-size: 3rem;
     color: inherit;
     text-decoration: none;
     &:hover {
-      color: white;
+      color: grey;
       text-decoration: none;
     }
   }
@@ -67,9 +71,10 @@
 }
 
 .feature-item {
-  margin-top: 25px;
-  margin-bottom: 20px;
-  width: 80%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 85%;
+  margin: 0 auto;
     img {
       width: 100%;
       transition: .5s ease;
@@ -97,7 +102,6 @@
 #feature-cap {
   position: absolute;
   font-family: 'Abril Fatface', cursive;
-  width: 100%;
   transition: .5s ease;
   opacity: 0;
   z-index: 100;
