@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .welcome-header {
-  background-image: url("/assets/header_img1.png");
+  background-image: url("/assets/header_img1.jpg");
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -11,6 +11,8 @@
 
 .header-text {
   position: absolute;
+  color: white;
+  text-shadow: 0 0 2px grey;
   margin-top: 200px;
   margin-left: 650px;
   font-family:'Abril Fatface', cursive;
@@ -23,6 +25,7 @@
   }
   p{
     font-size: 3rem;
+    letter-spacing: 1px;
   }
   button {
     background: transparent;
