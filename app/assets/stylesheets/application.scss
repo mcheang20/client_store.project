@@ -24,11 +24,18 @@
 
 html {
   position: relative;
-  min-height: 100%;
+  font-size: 18px;
 }
 
 body {
    margin: 0 0 75px;
+   height: 100%;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .active-link {
@@ -44,44 +51,36 @@ body {
   width: 100%;
   padding-top: 15px;
   height: 100px;
-    &.transparent-nav {
-      position: absolute;
-      background-color: transparent;
-      border-bottom: 2px solid rgba(255,255,255,.2);
-      a {
-        color: white;
-        text-shadow: 0 0 5px rgba(1,1,1,.5);
-        letter-spacing: .25px;
-          &:hover {
-            color: grey;
-          }
-        }
-
-      i {
-        color: white;
-      }
-    }
-
-    li {
-      list-style: none;
-      float: left;
-      margin-left: 15px;
-    }
-
-    img {
-      height: 80px;
-      margin-top: -9px;
-    }
-
+  &.transparent-nav {
+    position: absolute;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255,255,255,.2);
     a {
-      font-size: 19px;
-      color: black;
-      font-weight: 400;
-      text-decoration: none;
-        &:hover {
-          text-decoration: none;
-        }
+      color: white;
+      text-shadow: 0 0 5px rgba(1,1,1,.5);
+      letter-spacing: .25px;
+      &:hover {
+        color: grey;
       }
+    }
+    i {
+      color: white;
+    }
+  }
+  li {
+    list-style: none;
+    float: left;
+    margin-left: 15px;
+  }
+  a {
+    font-size: 19px;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 @keyframes bounce-up {
@@ -114,6 +113,9 @@ body {
         background-position: 100% 100%;
         animation: bounce-up 0.4s ease;
       }
+    }
+    a {
+      font-size: 2rem;
     }
 }
 

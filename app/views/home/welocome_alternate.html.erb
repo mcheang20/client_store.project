@@ -1,0 +1,82 @@
+<!-- alternate home page swtich route source to revert back to old style -->
+
+<% provide(:nav_style, "transparent-nav") %>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div style="width:1500px; height:700px;"><%= image_tag("hat.jpg") %></div>
+      <div class="carousel-caption" id="carousel-item-one">
+         <h1>Exclusive Royals Cap</h1>
+         <%= link_to "Shop Now", "#", class: 'btn' %>
+       </div>
+   </div>
+   <div class="item">
+      <div style="width:1500px; height:700px;"><%= image_tag("bag.jpg") %></div>
+      <div class="carousel-caption" id="carousel-item">
+        <h1>Save On Accessory Items</h1>
+        <%= link_to "Shop Now", category_path(2), class: 'btn' %>
+      </div>
+    </div>
+    <div class="item">
+       <div style="width:1500px; height:700px;"><%= image_tag("sunglass.jpg") %></div>
+       <div class="carousel-caption" id="carousel-item">
+         <h1>50% Off Sunglasses</h1>
+         <%= link_to "Shop Now", product_path(1), class: 'btn' %>
+       </div>
+     </div>
+     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+       <span class="sr-only">Previous</span>
+     </a>
+     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+       <span class="sr-only">Next</span>
+     </a>
+   </div>
+</div>
+
+<div class="banner">
+  <p>Free shipping on orders over <strong>$75</strong></p>
+</div>
+
+<section class="collections container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="feature-item">
+        <img src="https://static1.squarespace.com/static/57e557ab9de4bb765144cdf5/57e92aa5be6594ead4a5eaa6/58519a1abebafb0499f4c1c0/1481742884184/PUP+Twitter+Header+02.png?format=1500w">
+        <div id="feature-cap">
+          <p>Featured Item Power Pin Ups</p>
+          <%= link_to "Shop Now", "#", class: 'btn' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="feature-image">
+        <%= link_to image_tag("accessories.jpg"), category_path(2) %>
+        <span class="image-caption" style="color:white;">Accessories</span>
+      </div>
+      <div class="feature-image">
+        <%= link_to image_tag("apparel.jpg"), category_path(1) %>
+        <span class="image-caption" style="color:white;">Apparel</span>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="feature-image-collection">
+        <%= link_to image_tag("http://cdn.iphonephotographyschool.com/wp-content/uploads/Balog.jpg"), "#" %>
+        <span class="image-caption" id="cap" style="color:white;">Collection</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg xmlns="http://www.w3.org/2000/svg">
+  <filter id="blur1">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+</svg>
