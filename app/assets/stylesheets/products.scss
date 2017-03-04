@@ -16,7 +16,11 @@
 }
 
 .item-cap {
-  font-size: 28px;
+  border: 2px solid rgba(255,255,255,.5);
+  width: 50%;
+  padding: 10px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2rem;
   letter-spacing: 1px;
   font-weight: 200;
   text-shadow: 0 0 10px black;
@@ -24,16 +28,18 @@
   position: absolute;
   left: 0;
   right: 0;
-  margin: auto;
-  margin-top: -190px;
+  margin: 0 auto;
+  bottom: 0;
+  margin-bottom: 100px;
   opacity: 0;
   transition: all 0.5s;
-
   a {
     color: white;
-    font-size: 28px;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
     &:hover {
       text-decoration: none;
+      color: grey;
     }
   }
 }
@@ -74,20 +80,16 @@
 
 .product-info {
   min-height: 600px;
-
   img {
     height: 600px;
   }
-
   h1 {
     color: #333d47;
   }
-
   h2 {
     font-weight: 200;
     color: tomato;
   }
-
   p {
     font-size: 16px;
     font-weight: 300;
@@ -99,7 +101,6 @@
   margin-top: 40px;
   margin-right: -65px;
   min-height: 400px;
-
   img {
     height: 250px;
     width: 320px;
@@ -111,7 +112,6 @@
     background-color: tomato;
     border: 1px solid tomato;
    }
-
   a {
     color: white;
     font-size: 20px;

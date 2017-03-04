@@ -4,8 +4,10 @@
     <% @products.each do |product| %>
       <div class="item-info col-md-4">
         <li class="img-tog"><%= link_to image_tag(product.image.url(:medium)), product%></li>
-        <p class="item-cap"><%= link_to product.name, product %></p></br></br>
-        <p class="item-cap"><%= number_to_currency(product.price)%></p></br>
+        <div class="item-cap">
+          <p><%= link_to product.name, product %></p>
+          <p><%= number_to_currency(product.price)%></p>
+        </div>
       </div>
     <% end %>
   </div>
