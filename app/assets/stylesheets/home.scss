@@ -196,6 +196,22 @@
    }
 }
 
+@media screen and (max-width: 770px) {
+  .feature-image img {
+    width: 100%;
+  }
+  .feature-image-collection img {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+   #cap {
+    padding-top: 300px;
+  }
+}
+
 .feature-image-collection {
   margin-bottom: 20px;
   img {

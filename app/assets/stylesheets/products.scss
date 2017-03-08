@@ -71,6 +71,14 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .img-tog img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
 .products-page {
   padding-top: 20px;
   margin-left: 50px;
