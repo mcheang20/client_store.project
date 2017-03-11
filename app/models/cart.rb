@@ -5,4 +5,5 @@ class Cart < ActiveRecord::Base
   def total_price
     orders.map {|order| order.quantity * order.product.price}.sum
   end
+  
 end

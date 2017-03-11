@@ -47,4 +47,5 @@ private
       redirect_to [pic.product]
     end
   end
+  
 end

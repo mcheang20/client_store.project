@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$main-font: 'Abril Fatface', cursive;
+
 .welcome-header {
   background-image: url("https://static.pexels.com/photos/157888/fashion-glasses-go-pro-female-157888.jpeg");
   background-size: cover;
@@ -13,7 +15,7 @@
   position: absolute;
   margin-top: 200px;
   margin-left: 650px;
-  font-family:'Abril Fatface', cursive;
+  font-family: $main-font;
   animation: fadeIn 1.5s;
   -moz-animation: fadeIn 1.5s; /* Firefox */
   -webkit-animation: fadeIn 1.5s; /* Safari and Chrome */
@@ -21,7 +23,7 @@
   h1 {
     font-size: 7rem;
   }
-  p{
+  p {
     font-size: 3rem;
     letter-spacing: 1px;
     color: white;
@@ -88,20 +90,20 @@
   }
 }
 
-.carousel-image{
+.carousel-image {
   img {
     width: 1500px;
     height: 640px;
   }
 }
 
-.feature-item:hover #feature-cap{
+.feature-item:hover #feature-cap {
   opacity: 1;
 }
 
 #feature-cap {
   position: absolute;
-  font-family: 'Abril Fatface', cursive;
+  font-family: $main-font;
   transition: .5s ease;
   opacity: 0;
   z-index: 100;
@@ -172,7 +174,6 @@
       -moz-filter: blur(100px);
       -ms-filter: blur(100px);
       filter: url(#blur1);
-
       filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
     }
   }
@@ -180,7 +181,7 @@
 
 .feature-image {
   margin-bottom: 20px;
-  font-family: 'Abril Fatface', cursive;
+  font-family:  $main-font;
   img {
     width: 560px;
     height: 400px;
@@ -239,7 +240,7 @@
 
 #cap {
   margin-top: -730px;
-  font-family: 'Abril Fatface', cursive;
+  font-family:  $main-font;
 }
 
 #carousel-item-one {
@@ -283,25 +284,25 @@
 }
 
 @keyframes fadeIn {
-    from {
-        top: -100px;
-        opacity:0;
-    }
-    to {
-        top: 0;
-        opacity:1;
-    }
+  from {
+      top: -100px;
+      opacity:0;
+  }
+  to {
+      top: 0;
+      opacity:1;
+  }
 }
 
 @-webkit-@keyframes fadeIn {
-    from {
-        top: -100px;
-        opacity:0;
-    }
-    to {
-        top: 0;
-        opacity:1;
-    }
+  from {
+      top: -100px;
+      opacity:0;
+  }
+  to {
+      top: 0;
+      opacity:1;
+  }
 }
 
 .banner {
@@ -309,8 +310,8 @@
   height: 75px;
   width: 100%;
   display: none;
-  font-family: 'Abril Fatface', cursive;
-  p{
+  font-family: $main-font;
+  p {
     text-align: center;
     font-size: 5rem;
     color: white;

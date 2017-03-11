@@ -24,4 +24,5 @@ module ApplicationHelper
   def subscriber
     @subscriber = Subscriber.new
   end
+  
 end

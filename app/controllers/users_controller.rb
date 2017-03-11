@@ -26,4 +26,5 @@ before_action :require_sign_in
   def user_params
     params.require(:user).permit(:username, :email, :role)
   end
+  
 end
