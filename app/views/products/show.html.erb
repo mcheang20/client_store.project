@@ -10,16 +10,16 @@
   <section class="product-info">
     <div class="col-md-6 pull-left"><%= link_to (image_tag(@product.image.url(:large))), @product.image.url(:large), data: {lightbox: "eaxmple-set"} %></div>
     <div class="col-md-6 pull-right">
-      <h1 style="font-family:'Abril Fatface', cursive;"><%= @product.name %></h1>
-      <h2 style="font-family:'Abril Fatface', cursive;"><%= number_to_currency(@product.price) %></h2>
+      <h1><%= @product.name %></h1>
+      <h2><%= number_to_currency(@product.price) %></h2>
       <p>
         <strong>Product Details:</strong></br>
         <%= markdown(@product.description) %>
       </p>
-      <div class="checkout-btn" style="font-family:'Abril Fatface', cursive;"><%= link_to "Add to Cart", add_to_cart_product_path(@product), class: 'btn btn-default' %></div>
+      <div class="checkout-btn"><%= link_to "Add to Cart", add_to_cart_product_path(@product), class: 'btn btn-default' %></div>
     </div>
   </section>
-  
+
   <section class="product-thumbnails">
     <% @product.pics.each do |pic| %>
       <div class="col-sm-3">

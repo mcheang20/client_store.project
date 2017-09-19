@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$main-font: 'Abril Fatface', cursive;
+$main-font: 'Catamaran', sans-serif;
 
 .welcome-header {
   background-image: url("https://static.pexels.com/photos/157888/fashion-glasses-go-pro-female-157888.jpeg");
@@ -13,8 +13,7 @@ $main-font: 'Abril Fatface', cursive;
 
 .header-text {
   position: absolute;
-  margin-top: 200px;
-  margin-left: 650px;
+  padding: 15%;
   font-family: $main-font;
   animation: fadeIn 1.5s;
   -moz-animation: fadeIn 1.5s; /* Firefox */
@@ -73,9 +72,13 @@ $main-font: 'Abril Fatface', cursive;
 }
 
 .feature-item {
+  background-image: url("feature-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-top: 25px;
   padding-bottom: 25px;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
     img {
       width: 100%;
@@ -102,13 +105,11 @@ $main-font: 'Abril Fatface', cursive;
 }
 
 #feature-cap {
-  position: absolute;
+  //position: absolute;
   font-family: $main-font;
   transition: .5s ease;
-  opacity: 0;
+  //opacity: 0;
   z-index: 100;
-  margin-top: -250px;
-  padding-left: 50px;
   -ms-transform: translate(-50%, -50%);
   p {
     font-size: 5rem;
@@ -307,18 +308,18 @@ $main-font: 'Abril Fatface', cursive;
 
 .banner {
   background-color: tomato;
-  height: 75px;
   width: 100%;
-  display: none;
+  //display: none;
   font-family: $main-font;
   p {
     text-align: center;
-    font-size: 5rem;
+    font-size: 3rem;
     color: white;
     text-transform: uppercase;
   }
 }
 
 .collections {
+  margin-top: 20px;
   margin-bottom: 100px;
 }
