@@ -17,33 +17,33 @@
 
 $(document).ready(function(){
   setTimeout(function(){
-    $('.alert-wrapper').fadeOut("slow", function(){
-            $(this).remove();
-              })
+    $('.alert-wrapper').fadeOut('slow', function(){
+      $(this).remove();
+        })
   }, 3000);
 });
 
 $(document).ready(function() {
-    $("nav .box [href]").each(function() {
-        if (this.href == window.location.href) {
-            $(this).addClass("active-link");
-        }
-    });
+  $("nav .box [href]").each(function() {
+    if (this.href == window.location.href) {
+      $(this).addClass("active-link");
+    }
+  });
 });
 
 $(".item-info li").each(function (i) {
     $(this).attr("style", "-webkit-animation-delay:" + i * 200 + "ms;"
-                 + "-moz-animation-delay:" + i * 200 + "ms;"
-                 + "-o-animation-delay:" + i * 200 + "ms;"
-                 + "animation-delay:" + i * 200 + "ms;");
+     + "-moz-animation-delay:" + i * 200 + "ms;"
+     + "-o-animation-delay:" + i * 200 + "ms;"
+     + "animation-delay:" + i * 200 + "ms;");
     if (i == $(".item-info li").size() -1) {
         $(".item-info").addClass("play")
     }
 });
 
 $(document).scroll(function () {
-    var ban = $(this).scrollTop();
-    if (ban > 200) {
-        $('.banner').fadeIn("slow");
-    }
+  var ban = $(this).scrollTop();
+  if (ban > 200) {
+      $('.banner').fadeIn('slow');
+  }
 });

@@ -18,9 +18,9 @@
   <% end %>
   <div>
     <% if @cart.present? %>
-      <li class="cart-btn pull-right"><i class="fa fa-shopping-cart"></i> <%= link_to "Cart", cart_path(@cart)%><span class="badge"><%=@cart.products.count%></span></li>
+      <li class="cart-btn pull-right"><i class="fa fa-shopping-cart"></i><%= link_to "Cart", cart_path(@cart)%><span class="badge"><%=@cart.products.count%></span></li>
     <% else %>
-      <li class="cart-btn pull-right"><i class="fa fa-shopping-cart"></i> <%= link_to "Cart", carts_path %></li>
+      <li class="cart-btn pull-right"><i class="fa fa-shopping-cart"></i><%= link_to "Cart", carts_path %></li>
     <% end %>
 
     <li class="pull-right" id="social-btn"><a href="#"><i class="fa fa-facebook"></i></a></li>
